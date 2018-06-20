@@ -1,0 +1,15 @@
+ErrorDocument 404 /404.php
+
+RewriteEngine On    # Turn on the rewriting engine
+RewriteRule    ^join/?$    register.php    [NC,L]    # Handle registration page requests
+RewriteRule    ^login/?$    login.php    [NC,L]    # Handle login page requests
+RewriteRule    ^contact/?$    contact.php    [NC,L]    # Handle contact page requests
+RewriteRule    ^copyright/?$    copyright.php    [NC,L]    # Handle copyright page requests
+RewriteRule    ^admindashboard/?$    admincenter.php    [NC,L]    # Handle admin page requests
+RewriteRule    ^forgotpassword/?$    forgotpassword.php    [NC,L]    # Handle forgot password page requests
+RewriteRule    ^resetpassword/?$    resetpassword.php    [NC,L]    # Handle reset password page requests
+RewriteRule    ^logout/?$    includes/logout.inc.php    [NC,L]    # Handle logout page requests
+RewriteRule    ^editprofile/?$    profile/editprofile.php    [NC,L]    # Handle edit profile page requests
+RewriteRule    ^uploadresource/?$    uploadresource.php    [NC,L]    # Handle edit profile page requests
+RewriteRule    ^profile/([A-Za-z0-9-]+)/?$    profile/profile.php?username=$1    [NC,L]    # Handle profile requests
+RewriteRule    ^results/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/([A-Za-z0-9-]+)/?$    results.php?standard=$1&grade=$2&concept=$3    [NC,L]    # Handle profile requests

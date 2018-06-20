@@ -1,0 +1,227 @@
+#main
+  position: relative
+  width: 100%
+  z-index: 10
+  top: 0
+
+#topbar
+	position: relative
+	height: 90px
+	width: 100%
+
+#logo
+  background: url(../imgs/logo.png) no-repeat
+  background-size: 189px 45px
+  position: relative
+  height: 45px
+  width: 189px
+  float: left
+  top: 20px
+
+#navbar
+  float: right
+  margin-top: 23px
+  line-height: 40px
+
+  ul
+    float: left
+    height: 100%
+
+    #myprofile
+      position: relative
+      &:after
+        content: ''
+        width: 0
+        height: 0
+        top: 15px
+        right: -30px
+        cursor: pointer
+        position: absolute
+        border-left: 10px solid transparent
+        border-right: 10px solid transparent
+        border-top: 10px solid $primary-color
+      .dropdown
+        box-shadow:  0 2px 6px rgba(0,0,0,0.05), 0 0 0 1px rgba(0,0,0,0.07)
+        position: absolute
+        background: #fff
+        display: none
+        width: 220px
+        top: 65px
+        a
+          display: block
+          height: 40px
+          line-height: 40px
+          width: 100%
+          box-sizing: border-box
+          padding: 0 10px
+          border-bottom: 1px solid #ccc
+          &:hover
+            background: #ebebeb
+
+        &:before
+          content: ''
+          width: 0
+          height: 0
+          top: -15px
+          left: 20px
+          position: absolute
+          border-left: 15px solid transparent
+          border-right: 15px solid transparent
+          border-bottom: 15px solid #fff
+
+    #upload
+      height: 40px
+      color: #ffffff
+      padding: 0 10px
+      line-height: 2.5
+      margin-right: 20px
+      border-radius: 3px
+      cursor: pointer
+      background: $primary-color
+      &:hover
+        background: $primary-color-hover
+      a
+        color: #fff
+        padding: 10px 0
+
+    #smallprofilepic
+      width: 40px
+      height: 40px
+      top: -2px
+      position: relative
+      vertical-align: middle
+      margin-right: 10px
+      display: inline-block
+
+      img
+        width: 40px
+        height: 40px
+        border-radius: 3px
+
+    li
+      float: left
+      margin-right: 20px
+      &:last-child
+        margin-right: 0
+
+      a
+        font-weight: 500
+        color: $primary-color
+        text-decoration: none
+        cursor: pointer
+
+        span
+          &:hover
+            border-bottom: 2px solid $primary-color
+
+      .register
+        height: 40px
+        color: #ffffff
+        padding: 0 15px
+        line-height: 2.5
+        border-radius: 3px
+        display: inline-block
+        background: $primary-color
+
+        &:hover
+          background: $primary-color-hover
+          border: 0
+
+  #mobilemenu
+    display: block
+    cursor: pointer
+    display: none
+    margin-top: 10px
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+
+    span
+        display: block
+        background: $primary-color
+        width: 30px
+        height: 2px
+        border-radius: 3px
+        -webkit-transition: .25s margin .25s, .25s transform
+        transition: .25s margin .25s, .25s transform
+
+        &:nth-child(1)
+          margin-bottom: 5px
+
+        &:nth-child(3)
+          margin-top: 5px
+    &.active
+      margin-top: 15px
+      span
+        -webkit-transition: .25s margin, .25s transform .25s
+        transition: .25s margin, .25s transform .25s
+
+        &:nth-child(1)
+            margin-top: 8px
+            margin-bottom: -2px
+
+        &:nth-child(1), &:nth-child(2)
+            -webkit-transform: rotate(45deg)
+            transform: rotate(45deg)
+
+        &:nth-child(3)
+            margin-top: -2px
+            -webkit-transform: rotate(135deg)
+            transform: rotate(135deg)
+
+#mobile
+  list-style: none
+  background: $primary-color
+  box-shadow: inset 7px 0 9px -7px rgba(0,0,0,0.4)
+
+  li
+    height: 45px
+    line-height: 45px
+    text-align: center
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+
+    a
+      color: rgba(255, 255, 255, 0.5)
+      text-decoration: none
+
+      &:hover
+        color: rgba(255, 255, 255, 0.75)
+
+#mobileform
+  position: absolute
+  display: none
+  z-index: 100
+  width: 100%
+  height: 100%
+  background: #eee
+
+  ul
+    list-style: none
+    width: 90%
+
+  li
+    height: 50px
+
+  #close
+    position: absolute
+    right: 15px
+    top: 15px
+    width: 32px
+    height: 32px
+    cursor: pointer
+    &:hover
+      opacity: 0.8
+
+    &:before, &:after
+      position: absolute
+      left: 15px
+      content: ' '
+      height: 33px
+      width: 2px
+      background-color: $primary-color
+
+    &:before
+      transform: rotate(45deg)
+
+    &:after
+      transform: rotate(-45deg)

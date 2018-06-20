@@ -1,0 +1,319 @@
+#background
+  height: 250px
+  background: $primary-color
+
+#profile
+  width: 100%
+  margin-top: -200px
+  text-align: center
+  position: relative
+
+  #profilenav
+    height: 45px
+    text-align: left
+    border-bottom: 1px solid #ccc
+    margin-bottom: 40px
+
+    a
+      color: #000
+
+    ul
+      .active
+        font-weight: bold
+        border-bottom: 4px solid $primary-color
+
+        > a
+          color: $primary-color
+
+      li
+        text-transform: uppercase
+        display: inline-block
+        font-weight: bold
+        margin-right: 15px
+        transition: all 0.1s
+        line-height: 2.5
+        height: 45px
+
+        &:hover
+          cursor: pointer
+          color: $primary-color
+          border-bottom: 4px solid $primary-color
+
+          > a
+            color: $primary-color
+
+  .labelleft
+    float: left
+    width: 49%
+    text-align: left
+
+  .labelright
+    float: right
+    width: 49%
+    text-align: left
+
+  .label
+    float: left
+    width: 100%
+    text-align: left
+
+  .whitespace
+    height: 1px
+
+  h1
+    color: #fff
+    font-size: 2.75em
+
+  .editprofile
+    top: -3px
+    left: 10px
+    opacity: 0.15
+    width: 25px
+    height: 25px
+    position: relative
+    display: inline-block
+    background: url(../imgs/edit.png) no-repeat
+    background-size: 25px 25px
+
+    &:hover
+      cursor: pointer
+      opacity: 0.25
+
+  .norm
+    height: 50px
+    outline: 0
+    width: 100%
+    font-size: 1.2em
+    padding: 0 15px
+    margin-bottom: 15px
+    box-sizing: border-box
+    border: 1px solid $border-gray
+
+  .left
+    width: 49%
+    float: left
+
+  .right
+    width: 49%
+    float: right
+
+  .updateprofile
+    outline: 0
+    width: 100%
+    margin: auto
+    height: 50px
+    display: block
+    max-width: 250px
+    font-size: 1.1em
+    color: $primary-color
+    border: 1px solid $primary-color
+    background-color: transparent
+
+    &:hover
+      color: #fff
+      cursor: pointer
+      background-color: $primary-color
+
+  #profilepic
+    left: -5px
+    margin: auto
+    width: 250px
+    height: 250px
+    background: #fff
+    margin-top: 15px
+    position: relative
+    margin-bottom: 25px
+    border: 1px solid $border-gray
+
+    img
+      width: 225px
+      height: 225px
+      margin-top: 12.5px
+
+    .editimage
+      width: 225px
+      height: 225px
+      margin: auto
+      position: relative
+      background: #000
+      margin-top: 12px
+
+      img
+        position: relative
+        top: -12.5px
+
+      &:hover > span
+        display: block
+
+      span
+        display: none
+        position: absolute
+        top: 50%
+        margin-top: -25px
+        color: #fff
+        width: 90%
+        height: 50px
+        font-size: 18px
+        font-weight: bold
+        margin-left: 5%
+        cursor: pointer
+
+      &:hover > img
+        opacity: 0.4
+        cursor: pointer
+
+#picture-editor
+  display: none
+  text-align: center
+
+  .closebutton
+    position: absolute
+    top: 8px
+    right: 20px
+    font-size: 3em
+    cursor: pointer
+    color: $primary-color
+
+    &:hover
+      color: $primary-color-hover
+
+  h1
+    font-size: 2em
+    margin-bottom: 20px
+
+  .controls
+    width: 84px
+    margin: auto
+    height: 32px
+    margin-top: 10px
+
+    .rotate-ccw
+      background: url(../imgs/rotate_left.png) no-repeat
+      background-size: 20px
+      width: 20px
+      height: 20px
+      float: left
+      cursor: pointer
+
+      &:hover
+        opacity: 0.75
+
+    .rotate-cw
+      background: url(../imgs/rotate_right.png) no-repeat
+      background-size: 20px
+      width: 20px
+      height: 20px
+      float: right
+      cursor: pointer
+
+      &:hover
+        opacity: 0.75
+
+  .cropit-image-zoom-input, .cropit-image-zoom-input::-moz-range-track, .cropit-image-zoom-input::-moz-range-track
+    height: 5px
+    background: #eee
+    -webkit-border-radius: 5px
+    border-radius: 5px
+    outline:none
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+
+  input[type=range]
+    -webkit-appearance: none
+    margin: 18px auto
+
+  input[type=range]:focus
+    outline: none
+
+  input[type=range]::-webkit-slider-thumb
+    -webkit-appearance: none
+    height: 14px
+    width: 14px
+    border-radius: 15px
+    background: $primary-color
+    cursor: pointer
+    margin-top: -6px
+
+  input[type=range]::-moz-range-thumb
+    -webkit-appearance: none
+    height: 15px
+    width: 15px
+    border-radius: 15px
+    background: $primary-color
+    cursor: pointer
+
+  input[type=range]::-ms-thumb
+    -webkit-appearance: none
+    height: 15px
+    width: 15px
+    border-radius: 15px
+    background: $primary-color
+    cursor: pointer
+
+  input[type=range]::-webkit-slider-runnable-track
+    width: 100%
+    height: 4px
+    cursor: pointer
+    background: #c87575
+    border-radius: 2px
+
+  input[type=range]:focus::-webkit-slider-runnable-track
+    background: #c87575
+
+  input[type=range]::-moz-range-track
+    width: 100%
+    height: 4px
+    cursor: pointer
+    background: #c87575
+    border-radius: 2px
+
+  input[type=range]::-ms-track
+    width: 100%
+    height: 4px
+    cursor: pointer
+    background: transparent
+    border-color: transparent
+    border-width: 8px 0
+    color: transparent
+
+  input[type=range]::-ms-fill-lower
+    background: #c87575
+    border-radius: 2px
+
+  input[type=range]:focus::-ms-fill-lower
+    background: #c87575
+
+  input[type=range]::-ms-fill-upper
+    background: #c87575
+    border-radius: 2px
+
+  input[type=range]:focus::-ms-fill-upper
+    background: #c87575
+
+  .cropit-image-zoom-input::-webkit-slider-thumb:hover, .cropit-image-zoom-input::-webkit-slider-thumb:hover, .cropit-image-zoom-input::-webkit-slider-thumb:active, .cropit-image-zoom-input::-webkit-slider-thumb:active, .cropit-image-zoom-input::-moz-range-thumb:hover, .cropit-image-zoom-input::-moz-range-thumb:hover, .cropit-image-zoom-input::-moz-range-thumb:active, .cropit-image-zoom-input::-moz-range-thumb:active
+    background: #bbb
+
+
+// PROFILE PICTURE IMAGE CROPPER
+.cropit-preview
+  background-color: #f8f8f8
+  background-size: cover
+  border: 1px solid #ccc
+  border-radius: 3px
+  margin: auto
+  margin-top: 7px
+  width: 250px
+  height: 250px
+
+.cropit-preview-image-container
+  cursor: move
+
+.image-size-label
+  margin-top: 10px
+
+input, .export
+  display: block
+
+button
+  margin-top: 10px

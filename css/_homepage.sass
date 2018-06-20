@@ -1,0 +1,134 @@
+#header
+  background: $primary-color url(../imgs/background_header.jpg) center no-repeat
+  background-size: cover
+  min-height: 575px
+  width: 100%
+  height: 85%
+  color: #fff
+
+#overlay
+  position: absolute
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+  opacity: 0.4
+  background: -webkit-linear-gradient(left, #d881ac , #f6d3b0)
+  background: -o-linear-gradient(right #d881ac , #f6d3b0)
+  background: -moz-linear-gradient(right, #d881ac , #f6d3b0)
+  background: linear-gradient(to right, #d881ac , #f6d3b0)
+
+#overlay-text
+	position: relative
+	font-weight: bold
+
+	.title
+		font-size: 4em
+		text-transform: capitalize
+
+#overlay-form
+  position: absolute
+  border-radius: 5px
+  z-index: 10
+  top: 50%
+  left: 50%
+  width: 90%
+  background: #fff
+  max-width: 900px
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05), 0 0 0 1px rgba(0,0,0,0.07)
+  transform: translate(-50%, -50%)
+
+  li
+    height: 60px
+    width: 28%
+    float: left
+    position: relative
+    &:last-child
+      width: 16%
+      background: transparent
+
+  #grade, #concept
+    .ap, .apc, .app, .csta, .indiana, .iste
+      display: none
+
+  .search
+    background: $primary-color
+    line-height: 60px
+    font-size: 22px
+    cursor: pointer
+    border-top-right-radius: 4px
+    border-bottom-right-radius: 4px
+    width: 100%
+    height: 100%
+    text-align: center
+    &:hover
+      background: $primary-color-hover
+
+  select
+    width: 100%
+    height: 100%
+    border: 0
+    appearance: none
+    padding: 0 35px 0 10px
+    box-sizing: border-box
+    -moz-appearance: none
+    -webkit-appearance: none
+    background: url(../imgs/select_arrow.png) no-repeat center right 10px
+    border-right: 1px solid #d3d3d3
+
+#scrolldown
+  transform: translateX(-50%)
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2)
+  font-weight: 500
+  cursor: pointer
+  position: absolute
+  margin: auto
+  bottom: 25px
+  width: 260px
+  z-index: 10
+  left: 50%
+  #scrollarrow
+    width: 20px
+    height: 20px
+    margin: auto
+    transform: rotate(45deg)
+    border-right: 3px solid #fff
+    border-bottom: 3px solid #fff
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2)
+
+.content
+  margin-top: 50px!important
+  h1
+    margin: 20px 0
+    color: #2a2a2a
+    font-size: 42px
+    font-weight: bold
+    text-align: center
+
+#featured
+  .item
+    width: 33.3%
+    height: 450px
+    float: left
+    margin-bottom: 50px
+    .resource
+      background: #fff
+      margin: auto
+      width: 95%
+      height: 100%
+      overflow: hidden
+      &:hover
+        cursor: pointer
+        background: #f9f9f9
+      .img
+        width: 100%
+        height: 40%
+        background: $primary-color
+      .info
+        padding: 15px
+        box-sizing: border-box
+        .resourcetitle
+          font-size: 20px
+          font-weight: 500
+          margin-bottom: 15px
+          color: $primary-color
